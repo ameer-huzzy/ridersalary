@@ -26,13 +26,12 @@ export function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `username=${email}&password=${password}`
-      });
+      const response = await fetch("https://ridersalary-bd.onrender.com/auth/login", {
+  method: "POST",
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: `username=${email}&password=${password}`
+});
+
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
 
